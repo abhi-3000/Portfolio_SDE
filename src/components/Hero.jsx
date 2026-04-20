@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import myImage1 from "../assets/abhi1.png";
-import { personalData } from '../constants';
+import myImage2 from "../assets/image1.png";
+import myImage3 from "../assets/image2.png";
+import { personalData } from "../constants";
 import { FaDownload } from "react-icons/fa";
 
 const Hero = () => {
@@ -10,7 +12,7 @@ const Hero = () => {
     const el = containerRef.current;
     if (!el) return;
     requestAnimationFrame(() => {
-      el.classList.add('hero--visible');
+      el.classList.add("hero--visible");
     });
   }, []);
 
@@ -123,7 +125,6 @@ const Hero = () => {
         className="hero-root min-h-screen flex items-center justify-center pt-20 pb-8 px-3 md:px-12"
       >
         <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-14 md:gap-16">
-
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
             <h1 className="hero-text-block hero-name text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.08]">
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-white/95 to-white/50">
@@ -138,14 +139,15 @@ const Hero = () => {
               </span>
             </div>
 
-            <div
-              className="hero-text-block hero-divider mt-7 mb-0 w-full flex justify-center md:justify-start"
-            >
-              <div style={{
-                width: '48px',
-                height: '1px',
-                background: 'linear-gradient(90deg, rgba(255,255,255,0.2), transparent)'
-              }} />
+            <div className="hero-text-block hero-divider mt-7 mb-0 w-full flex justify-center md:justify-start">
+              <div
+                style={{
+                  width: "48px",
+                  height: "1px",
+                  background:
+                    "linear-gradient(90deg, rgba(255,255,255,0.2), transparent)",
+                }}
+              />
             </div>
 
             <p className="hero-text-block hero-intro mt-6 text-base md:text-lg text-white/50 max-w-md leading-relaxed font-light">
@@ -154,16 +156,16 @@ const Hero = () => {
 
             <div className="hero-text-block hero-btns flex flex-wrap justify-center md:justify-start gap-3 mt-9">
               <a
-  href="/resume.pdf"
-  download="Abhishek_Mandal_Resume.pdf"
-  className="btn-primary flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 md:px-9 md:py-4 rounded-full font-semibold text-sm md:text-base shadow-[0_4px_20px_rgba(255,255,255,0.22)] active:scale-95"
->
-  Resume <FaDownload size={14} />
-</a>
+                href="/resume.pdf"
+                download="Abhishek_Mandal_Resume.pdf"
+                className="btn-primary flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 md:px-9 md:py-4 rounded-full font-semibold text-sm md:text-base shadow-[0_4px_20px_rgba(255,255,255,0.22)] active:scale-95"
+              >
+                Resume <FaDownload size={14} />
+              </a>
               <a
                 href="#contact"
                 className="btn-secondary text-white/80 px-7 py-3.5 md:px-9 md:py-4 rounded-full font-semibold text-sm md:text-base border border-white/12 backdrop-blur-sm active:scale-95"
-                style={{ background: 'rgba(255,255,255,0.04)' }}
+                style={{ background: "rgba(255,255,255,0.04)" }}
               >
                 Contact Me
               </a>
@@ -175,8 +177,9 @@ const Hero = () => {
               <div
                 className="glow-blob absolute -inset-6 rounded-[32px]"
                 style={{
-                  background: 'radial-gradient(ellipse at 60% 40%, rgba(90,52,44,0.55) 0%, transparent 70%)',
-                  filter: 'blur(32px)',
+                  background:
+                    "radial-gradient(ellipse at 60% 40%, rgba(90,52,44,0.55) 0%, transparent 70%)",
+                  filter: "blur(32px)",
                   zIndex: 0,
                 }}
               />
@@ -184,24 +187,24 @@ const Hero = () => {
               <div
                 className="absolute -inset-3 rounded-[28px]"
                 style={{
-                  background: 'rgba(255,255,255,0.06)',
-                  filter: 'blur(20px)',
+                  background: "rgba(255,255,255,0.06)",
+                  filter: "blur(20px)",
                   zIndex: 0,
                 }}
               />
 
               <div
-                className="img-shine relative rounded-[24px] overflow-hidden border border-white/[0.11] shadow-[0_32px_80px_rgba(0,0,0,0.55)]"
+                className="img-shine relative rounded-[24px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.55)]"
                 style={{
-                  width: 'clamp(260px, 38vw, 420px)',
-                  height: 'clamp(300px, 44vw, 500px)',
-                  background: 'rgba(255,255,255,0.03)',
-                  backdropFilter: 'blur(10px)',
+                  width: "clamp(260px, 38vw, 420px)",
+                  height: "clamp(300px, 44vw, 500px)",
+                  background: "rgba(255,255,255,0.03)",
+                  backdropFilter: "blur(2px)",
                   zIndex: 1,
                 }}
               >
                 <img
-                  src={myImage1}
+                  src={myImage3}
                   alt={personalData.name}
                   className="w-full h-full object-cover object-center"
                 />
@@ -212,7 +215,7 @@ const Hero = () => {
                 style={{ zIndex: 0 }}
                 aria-hidden="true"
               >
-                {Array.from({ length: 16 }).map((_, i) => (
+                {Array.from({ length: 10 }).map((_, i) => (
                   <div key={i} className="flex gap-2 mb-2">
                     {Array.from({ length: 4 }).map((_, j) => (
                       <div
@@ -225,7 +228,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>

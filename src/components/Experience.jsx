@@ -56,7 +56,7 @@ const ExpCard = ({ exp, index }) => {
           transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
         }
         .exp-glass-card:hover {
-          transform: translateY(-4px);
+          transform: translateY(0px);
           box-shadow: 0 48px 100px rgba(0,0,0,0.55);
           border-color: rgba(255,255,255,0.16);
           background: rgba(255,255,255,0.065);
