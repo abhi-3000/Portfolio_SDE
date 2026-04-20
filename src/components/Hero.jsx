@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import myImage1 from "../assets/abhi1.png";
-import myImage2 from "../assets/image1.png";
-import myImage3 from "../assets/image2.png";
+// import myImage2 from "../assets/image1.png";
+import myImage3 from "../assets/image2.webp";
 import { personalData } from "../constants";
 import { FaDownload } from "react-icons/fa";
 
